@@ -26,16 +26,13 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
+    <main className="min-h-screen bg-black flex items-center justify-center px-4">
       <div className="w-full max-w-md">
-        <div className="bg-slate-800/50 backdrop-blur border border-slate-700 rounded-2xl p-8 md:p-12">
-          {/* Header */}
+        <div className="bg-zinc-900/50 backdrop-blur border border-zinc-800 rounded-2xl p-8 md:p-12">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-white mb-2">Welcome Back</h1>
-            <p className="text-lg text-slate-300">Sign in to continue to Asha</p>
+            <h1 className="text-4xl font-bold text-white">Sign In</h1>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleLogin} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="email" className="text-lg text-white">
@@ -46,7 +43,7 @@ export default function LoginPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="h-14 text-lg bg-slate-900/50 border-slate-600 text-white"
+                className="h-14 text-lg bg-black border-zinc-700 text-white"
                 required
               />
             </div>
@@ -60,7 +57,7 @@ export default function LoginPage() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="h-14 text-lg bg-slate-900/50 border-slate-600 text-white"
+                className="h-14 text-lg bg-black border-zinc-700 text-white"
                 required
               />
             </div>
@@ -73,14 +70,10 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          {/* Footer */}
           <div className="mt-6 text-center">
-            <p className="text-lg text-slate-300">
-              Don't have an account?{" "}
-              <Link href="/signup" className="text-white font-semibold hover:underline">
-                Sign Up
-              </Link>
-            </p>
+            <Link href="/signup" className="text-white text-lg hover:underline">
+              Create Account
+            </Link>
           </div>
         </div>
       </div>

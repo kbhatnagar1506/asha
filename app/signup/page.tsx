@@ -28,13 +28,12 @@ export default function SignupPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
+    <main className="min-h-screen bg-black flex items-center justify-center px-4">
       <div className="w-full max-w-md">
-        <div className="bg-slate-800/50 backdrop-blur border border-slate-700 rounded-2xl p-8 md:p-12">
+        <div className="bg-zinc-900/50 backdrop-blur border border-zinc-800 rounded-2xl p-8 md:p-12">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-white mb-2">Join Asha</h1>
-            <p className="text-lg text-slate-300">Create your account to get started</p>
+            <h1 className="text-4xl font-bold text-white">Sign Up</h1>
           </div>
 
           {/* Form */}
@@ -48,7 +47,7 @@ export default function SignupPage() {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="h-14 text-lg bg-slate-900/50 border-slate-600 text-white"
+                className="h-14 text-lg bg-black border-zinc-700 text-white"
                 required
               />
             </div>
@@ -62,7 +61,7 @@ export default function SignupPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="h-14 text-lg bg-slate-900/50 border-slate-600 text-white"
+                className="h-14 text-lg bg-black border-zinc-700 text-white"
                 required
               />
             </div>
@@ -76,7 +75,7 @@ export default function SignupPage() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="h-14 text-lg bg-slate-900/50 border-slate-600 text-white"
+                className="h-14 text-lg bg-black border-zinc-700 text-white"
                 required
               />
             </div>
@@ -91,12 +90,9 @@ export default function SignupPage() {
 
           {/* Footer */}
           <div className="mt-6 text-center">
-            <p className="text-lg text-slate-300">
-              Already have an account?{" "}
-              <Link href="/login" className="text-white font-semibold hover:underline">
-                Sign In
-              </Link>
-            </p>
+            <Link href="/login" className="text-white text-lg hover:underline">
+              Sign In
+            </Link>
           </div>
         </div>
       </div>

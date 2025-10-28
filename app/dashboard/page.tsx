@@ -58,20 +58,8 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-black flex">
       {/* Left Side Menu */}
       <div className="w-80 bg-black border-r border-zinc-800 flex flex-col">
-        {/* User Info */}
-        <div className="p-6 border-b border-zinc-800">
-          <h3 className="text-2xl font-bold text-white mb-2">{userName}</h3>
-          <Button
-            onClick={handleLogout}
-            variant="outline"
-            className="w-full text-lg py-6 h-auto border-zinc-700 text-white hover:bg-zinc-900 bg-transparent"
-          >
-            Logout
-          </Button>
-        </div>
-
         {/* Menu Items */}
-        <nav className="flex-1 p-4">
+        <nav className="flex-1 p-4 flex flex-col">
           <div className="space-y-3">
             {menuItems.map((item) => {
               const Icon = item.icon
@@ -91,6 +79,16 @@ export default function DashboardPage() {
               )
             })}
           </div>
+
+          <div className="mt-auto pt-4">
+            <Button
+              onClick={handleLogout}
+              variant="outline"
+              className="w-full text-lg py-6 h-auto border-zinc-700 text-white hover:bg-zinc-900 bg-transparent"
+            >
+              Logout
+            </Button>
+          </div>
         </nav>
       </div>
 
@@ -107,7 +105,6 @@ export default function DashboardPage() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <h1 className="text-8xl font-bold text-white drop-shadow-2xl">ASHA</h1>
             <elevenlabs-convai agent-id="agent_8701k8mp4es6fk0btvf0j52tfaa1"></elevenlabs-convai>
           </div>
         )}
